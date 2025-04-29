@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Setup | Howzatt!</title>
+    <link rel="stylesheet" href="setup.css">
+</head>
+<script></script>
+<body>
+    <audio id="bgsetmusic" src="ipl_extended.mp3" autoplay loop hidden></audio>
+
+    <div class="setupcontainer">
+        <h1>Match Setup</h1>
+        <label for="team1">Team 1 Name:</label>
+        <input type="text" id="team1" placeholder="Enter Team 1 Name">
+        <label for="team2">Team 2 Name:</label>
+        <input type="text" id="team2" placeholder="Enter Team 2 Name">
+        <label for="tossWinner">Toss Winner:</label>
+        <select id="tossWinner">
+            <option value="team1">Team 1</option>
+            <option value="team2">Team 2</option>
+        </select> 
+        <label for="tossDecision">Toss Decision:</label>
+        <select id="tossDecision">
+            <option value="bat">Bat</option>
+            <option value="bowl">Bowl</option>
+        </select>
+        
+        <button type="button" id="startMatch">Start Match</button>
+    </div>
+    
+    <script src="score.js"></script>
+</body>
+</html>

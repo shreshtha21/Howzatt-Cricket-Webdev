@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Match | Howzatt!</title>
+  <link rel="stylesheet" href="live.css"/>
+</head>
+<body>
+
+<div class="maincontainer">
+  <div class="scorecontainer">
+    <h1 id="matchStatus">Live Match</h1>
+    <div class="score-display" id="scoreDisplay"></div>
+
+    <div class="batters">
+      <h2>Batters</h2>
+      <table id="batterTable">
+        <tr><th>Name</th><th>Runs</th><th>Balls</th><th>4s</th><th>6s</th><th>SR</th></tr>
+        <tr id="strikeBatter"></tr>
+        <tr id="nonStrikeBatter"></tr>
+      </table>
+    </div>
+
+    <div class="bowler">
+      <h2>Bowler</h2>
+      <p id="bowlerStats">Bowler: - | Overs: 0.0 | Runs: 0 | Wickets: 0 | Economy: 0.00</p>
+    </div>
+    <div id="chasebox" style="display: none;">
+      <p id="chaseboxx"> </p>
+    </div> 
+    <div class="runrate">
+      <p id="rrdisplay">CRR: 0.00 | RRR: -</p>
+    </div>
+
+   <div id="chasebox">
+   
+   </div> 
+    <div class="controls">
+      <button onclick="updateScore(0)">0</button>
+      <button onclick="updateScore(1)">1</button>
+      <button onclick="updateScore(2)">2</button>
+      <button onclick="updateScore(3)">3</button>
+      <button onclick="updateScore(4)">4</button>
+      <button onclick="updateScore(6)">6</button>
+      <button onclick="wicket()">Wicket</button>
+      <button onclick="changebowler()">New Bowler</button>
+
+      <div>
+      <button onclick="extraBall('wide')">Wide</button>
+      <button onclick="extraBall('no')">No Ball</button>
+
+      <button onclick="updateExtras('bye')">Bye</button>
+      <button onclick="updateExtras('legbye')">Leg Bye</button>
+      </div>
+      <button onclick="location.href='scorecard.html'">Scorecard</button>
+    </div>
+  </div>
+
+  <div class="commentarycontainer">
+    <h3>Live Commentary</h3>
+    <ul id="commentlist"></ul>
+  </div>
+
+
+</div>
+
+<script src="score.js"></script>
+</body>
+</html>
