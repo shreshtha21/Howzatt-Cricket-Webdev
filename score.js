@@ -292,6 +292,20 @@ function extraBall(type){
     }
     else if(type === "no"){
     }
+    if(currentinnings === 2){
+        const ballsbowl = (Math.floor(overs) * 6) + ((overs * 10) % 10);
+        const ballsleftt = (overslmt * 6) - ballsbowl;
+        const runsreqd = target - score;
+        let chase= `Need ${runsreqd} runs in ${ballsleftt} balls`;
+        document.getElementById("chasebox").innerHTML = `${chase}`;
+        document.getElementById("chasebox").style.background = "yellow";
+        document.getElementById("chasebox").style.color = "black";
+        document.getElementById("chasebox").style.display="block";
+        document.getElementById("chasebox").style.fontSize="25px";
+    }
+    if(currentinnings === 2 && score >=target){
+        endinni(true);
+    }
     displayscore();
 
     savegame();
@@ -332,6 +346,20 @@ else{
     alert("ENTER A VALID INPUT")
 }
 if(totalballs%6===0) changebowler();
+if(currentinnings === 2){
+    const ballsbowl = (Math.floor(overs) * 6) + ((overs * 10) % 10);
+    const ballsleftt = (overslmt * 6) - ballsbowl;
+    const runsreqd = target - score;
+    let chase= `Need ${runsreqd} runs in ${ballsleftt} balls`;
+    document.getElementById("chasebox").innerHTML = `${chase}`;
+    document.getElementById("chasebox").style.background = "yellow";
+    document.getElementById("chasebox").style.color = "black";
+    document.getElementById("chasebox").style.display="block";
+    document.getElementById("chasebox").style.fontSize="25px";
+}
+if(currentinnings === 2 && score >=target){
+    endinni(true);
+}
 }
 
 function displayscore(){
